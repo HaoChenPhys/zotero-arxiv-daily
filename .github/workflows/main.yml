@@ -38,4 +38,17 @@ jobs:
           MODEL_NAME: ${{ secrets.MODEL_NAME }}
           LANGUAGE: ${{ vars.LANGUAGE }}
         run: |
+          echo "ZOTERO_ID: $ZOTERO_ID"
+          echo "ZOTERO_KEY: $ZOTERO_KEY"
+          echo "ARXIV_QUERY: $ARXIV_QUERY"
+          echo "SMTP_SERVER: $SMTP_SERVER"
+          echo "SMTP_PORT: $SMTP_PORT"
+          echo "SENDER: $SENDER"
+          echo "RECEIVER: $RECEIVER"
+          echo "SENDER_PASSWORD: $SENDER_PASSWORD"
+          echo "MAX_PAPER_NUM: $MAX_PAPER_NUM"
+          echo "USE_LLM_API: $USE_LLM_API"
+          echo "OPENAI_API_KEY: $OPENAI_API_KEY"
+          echo "OPENAI_API_BASE: $OPENAI_API_BASE"
+          echo "MODEL_NAME: $MODEL_NAME"
           uv run main.py
